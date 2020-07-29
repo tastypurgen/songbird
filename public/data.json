@@ -1,0 +1,242 @@
+[
+  {
+    "id": 0,
+    "country": "Albania",
+    "language": "albanian",
+    "desc": "Albania, on Southeastern Europe’s Balkan Peninsula, is a small country with Adriatic and Ionian coastlines and an interior crossed by the Albanian Alps. The country has many castles and archaeological sites. Capital Tirana centers on sprawling Skanderbeg Square, site of the National History Museum, with exhibits spanning antiquity to post-communism, and frescoed Et’hem Bey Mosque.",
+    "capital": "Tirana",
+    "population": "2.8 million"
+  },
+  {
+    "id": 1,
+    "country": "Egypt",
+    "language": "arabic",
+    "desc": "Egypt, a country linking northeast Africa with the Middle East, dates to the time of the pharaohs. Millennia-old monuments sit along the fertile Nile River Valley, including Giza's colossal Pyramids and Great Sphinx as well as Luxor's hieroglyph-lined Karnak Temple and Valley of the Kings tombs. The capital, Cairo, is home to Ottoman landmarks like Muhammad Ali Mosque and the Egyptian Museum, a trove of antiquities.",
+    "capital": "Cairo",
+    "population": "98.4 million"
+  },
+  {
+    "id": 2,
+    "country": "Belarus",
+    "language": "belarusian",
+    "desc": "Belarus, officially the Republic of Belarus, formerly known by its Russian name Byelorussia or Belorussia, is a landlocked country in Eastern Europe. It is bordered by Russia to the northeast, Ukraine to the south, Poland to the west, and Lithuania and Latvia to the northwest.",
+    "capital": "Minsk",
+    "population": "9.4 million"
+  },
+  {
+    "id": 3,
+    "country": "Bulgaria",
+    "language": "bulgarian",
+    "desc": "Bulgaria is a Balkan nation with diverse terrain encompassing Black Sea coastline, a mountainous interior and rivers, including the Danube. A cultural melting pot with Greek, Slavic, Ottoman, and Persian influences, it has a rich heritage of traditional dance, music, costumes, and crafts. At the foot of domed Vitosha mountain is its capital city, Sofia, dating to the 5th century B.C.",
+    "capital": "Sofia",
+    "population": "7.0 million"
+  },
+  {
+    "id": 4,
+    "country": "China",
+    "language": "chinese",
+    "desc": "China, officially the People's Republic of China, is a country in East Asia. It is the world's most populous country, with a ppopulation of around 1.4 billion in 2019. Covering approximately 9.6 million square kilometres, it is the world's third- or fourth-largest country by area.",
+    "capital": "Beijing",
+    "population": "1.4 billion"
+  },
+  {
+    "id": 5,
+    "country": "Netherlands",
+    "language": "dutch",
+    "desc": "The Netherlands, a country in northwestern Europe, is known for a flat landscape of canals, tulip fields, windmills and cycling routes. Amsterdam, the capital, is home to the Rijksmuseum, Van Gogh Museum and the house where Jewish diarist Anne Frank hid during WWII. Canalside mansions and a trove of works from artists including Rembrandt and Vermeer remain from the city's 17th-century \"Golden Age.\"",
+    "capital": "Amsterdam",
+    "population": "17.3 million"
+  },
+  {
+    "id": 6,
+    "country": "England",
+    "language": "english",
+    "desc": "England is a country that is part of the United Kingdom. It shares land borders with Wales to its west and Scotland to its north. The Irish Sea lies northwest of England and the Celtic Sea to the southwest. England is separated from continental Europe by the North Sea to the east and the English Channel to the south.",
+    "capital": "London",
+    "population": "56 million"
+  },
+  {
+    "id": 7,
+    "country": "France",
+    "language": "albanian",
+    "desc": "France, in Western Europe, encompasses medieval cities, alpine villages and Mediterranean beaches. Paris, its capital, is famed for its fashion houses, classical art museums including the Louvre and monuments like the Eiffel Tower. The country is also renowned for its wines and sophisticated cuisine. Lascaux’s ancient cave drawings, Lyon’s Roman theater and the vast Palace of Versailles attest to its rich history.",
+    "capital": "Paris",
+    "population": "67 million"
+  },
+  {
+    "id": 8,
+    "country": "Germany",
+    "language": "german",
+    "desc": "Germany is a Western European country with a landscape of forests, rivers, mountain ranges and North Sea beaches. It has over 2 millennia of history. Berlin, its capital, is home to art and nightlife scenes, the Brandenburg Gate and many sites relating to WWII. Munich is known for its Oktoberfest and beer halls, including the 16th-century Hofbräuhaus. Frankfurt, with its skyscrapers, houses the European Central Bank.",
+    "capital": "Berlin",
+    "population": "83 million"
+  },
+  {
+    "id": 9,
+    "country": "Israel",
+    "language": "hebrew",
+    "desc": "Israel, a Middle Eastern country on the Mediterranean Sea, is regarded by Jews, Christians and Muslims as the biblical Holy Land. Its most sacred sites are in Jerusalem. Within its Old City, the Temple Mount complex includes the Dome of the Rock shrine, the historic Western Wall, Al-Aqsa Mosque and the Church of the Holy Sepulchre. Israel's financial hub, Tel Aviv, is known for its Bauhaus architecture and beaches.",
+    "capital": "Jerusalem",
+    "population": "8.9 million"
+  },
+  {
+    "id": 10,
+    "country": "India",
+    "language": "hindi",
+    "desc": "India, officially the Republic of India, is a country in South Asia. It is the second-most populous country, the seventh-largest country by area, and the most populous democracy in the world.",
+    "capital": "New Delhi",
+    "population": "1.4 billion"
+  },
+  {
+    "id": 11,
+    "country": "Hungary",
+    "language": "hungarian",
+    "desc": "Hungary is a landlocked country in Central Europe. Its capital, Budapest, is bisected by the Danube River. Its cityscape is studded with architectural landmarks from Buda’s medieval Castle Hill and grand neoclassical buildings along Pest’s Andrássy Avenue to the 19th-century Chain Bridge. Turkish and Roman influence on Hungarian culture includes the popularity of mineral spas, including at thermal Lake Hévíz.",
+    "capital": "Budapest",
+    "population": "9.8 million"
+  },
+  {
+    "id": 12,
+    "country": "Indonesia",
+    "language": "indonesian",
+    "desc": "Indonesia, officially the Republic of Indonesia, is a country in Southeast Asia and Oceania, between the Indian and Pacific oceans. It consists of more than seventeen thousand islands, including Sumatra, Java, Borneo, Sulawesi, and New Guinea.",
+    "capital": "Jakarta",
+    "population": "267 million"
+  },
+  {
+    "id": 13,
+    "country": "Italia",
+    "language": "italian",
+    "desc": "Italy, a European country with a long Mediterranean coastline, has left a powerful mark on Western culture and cuisine. Its capital, Rome, is home to the Vatican as well as landmark art and ancient ruins. Other major cities include Florence, with Renaissance masterpieces such as Michelangelo’s \"David\" and Brunelleschi's Duomo; Venice, the city of canals; and Milan, Italy’s fashion capital.",
+    "capital": "Rome",
+    "population": "60.4 million"
+  },
+  {
+    "id": 14,
+    "country": "Japan",
+    "language": "japanese",
+    "desc": "Japan is an island country of East Asia in the northwest Pacific Ocean. It borders the Sea of Japan to the west and extends from the Sea of Okhotsk in the north to the East China Sea and Taiwan in the south.",
+    "capital": "Tokyo",
+    "population": "126.5 million"
+  },
+  {
+    "id": 15,
+    "country": "Korea",
+    "language": "korean",
+    "desc": "South Korea, an East Asian nation on the southern half of the Korean Peninsula, shares one of the world’s most heavily militarized borders with North Korea. It’s equally known for its green, hilly countryside dotted with cherry trees and centuries-old Buddhist temples, plus its coastal fishing villages, sub-tropical islands and high-tech cities such as Seoul, the capital.",
+    "capital": "Seoul",
+    "population": "51.6 million"
+  },
+  {
+    "id": 16,
+    "country": "Ancient_Rome",
+    "language": "latin",
+    "desc": "Latin is a classical language belonging to the Italic branch of the Indo-European languages. Latin was originally spoken in the area around Rome, known as Latium. Through the power of the Roman Republic, it became the dominant language in Italy, and subsequently throughout the western Roman Empire.",
+    "capital": "Rome",
+    "population": "up to 80 million"
+  },
+  {
+    "id": 17,
+    "country": "Macedonia",
+    "language": "macedonian",
+    "desc": "North Macedonia, officially the Republic of North Macedonia, is a country in the Balkan Peninsula in Southeast Europe. It gained its independence in 1991 as one of the successor states of Yugoslavia.",
+    "capital": "Skopje",
+    "population": "2 million"
+  },
+  {
+    "id": 18,
+    "country": "Malaysia",
+    "language": "malay",
+    "desc": "Malaysia is a Southeast Asian country occupying parts of the Malay Peninsula and the island of Borneo. It's known for its beaches, rainforests and mix of Malay, Chinese, Indian and European cultural influences. The capital, Kuala Lumpur, is home to colonial buildings, busy shopping districts such as Bukit Bintang and skyscrapers such as the iconic, 451m-tall Petronas Twin Towers.",
+    "capital": "Kuala Lumpur",
+    "population": "31.5 million"
+  },
+  {
+    "id": 19,
+    "country": "Mongolia",
+    "language": "mongolian",
+    "desc": "Mongolia, a nation bordered by China and Russia, is known for vast, rugged expanses and nomadic culture. Its capital, Ulaanbaatar, centers around Chinggis Khaan (Genghis Khan) Square, named for the notorious founder of the 13th- and 14th-century Mongol Empire. Also in Ulaanbaatar are the National Museum of Mongolia, displaying historic and ethnographic artifacts, and the restored 1830 Gandantegchinlen Monastery.",
+    "capital": "Ulaanbaatar",
+    "population": "3.2 million"
+  },
+  {
+    "id": 20,
+    "country": "Poland",
+    "language": "polish",
+    "desc": "Poland, officially the Republic of Poland, is a country located in Central Europe. It is divided into 16 administrative subdivisions, covering an area of 312,696 square kilometres, and has a largely temperate seasonal climate",
+    "capital": "Warsaw",
+    "population": "38 million"
+  },
+  {
+    "id": 21,
+    "country": "Russia",
+    "language": "russian",
+    "desc": "Russia, or the Russian Federation, is a transcontinental country located in Eastern Europe and Northern Asia.",
+    "capital": "Moscow",
+    "population": "144.5 million"
+  },
+  {
+    "id": 22,
+    "country": "Slovakia",
+    "language": "slovakian",
+    "desc": "Slovakia, officially the Slovak Republic, is a landlocked country in Central Europe. It is bordered by Poland to the north, Ukraine to the east, Hungary to the south, Austria to the southwest, and Czech Republic to the northwest. Slovakia's territory spans about 49,000 square kilometres and is mostly mountainous.",
+    "capital": "Bratislava",
+    "population": "5.5 million"
+  },
+  {
+    "id": 23,
+    "country": "Spain",
+    "language": "spanish",
+    "desc": "Spain, a country on Europe’s Iberian Peninsula, includes 17 autonomous regions with diverse geography and cultures. Capital city Madrid is home to the Royal Palace and Prado museum, housing works by European masters. Segovia has a medieval castle (the Alcázar) and an intact Roman aqueduct. Catalonia’s capital, Barcelona, is defined by Antoni Gaudí’s whimsical modernist landmarks like the Sagrada Família church.",
+    "capital": "Madrid",
+    "population": "47 million"
+  },
+  {
+    "id": 24,
+    "country": "Tanzania",
+    "language": "swahili",
+    "desc": "Tanzania is an East African country known for its vast wilderness areas. They include the plains of Serengeti National Park, a safari mecca populated by the “big five” game (elephant, lion, leopard, buffalo, rhino), and Kilimanjaro National Park, home to Africa’s highest mountain. Offshore lie the tropical islands of Zanzibar, with Arabic influences, and Mafia, with a marine park home to whale sharks and coral reefs.",
+    "capital": "Dodoma",
+    "population": "55.3 million"
+  },
+  {
+    "id": 25,
+    "country": "Sweden",
+    "language": "swedish",
+    "desc": "Sweden is a Scandinavian nation with thousands of coastal islands and inland lakes, along with vast boreal forests and glaciated mountains. Its principal cities, eastern capital Stockholm and southwestern Gothenburg and Malmö, are all coastal. Stockholm is built on 14 islands. It has more than 50 bridges, as well as the medieval old town, Gamla Stan, royal palaces and museums such as open-air Skansen.",
+    "capital": "Stockholm",
+    "population": "10.2 million"
+  },
+  {
+    "id": 26,
+    "country": "Turkey",
+    "language": "turkish",
+    "desc": "Turkey, officially the Republic of Turkey, is a transcontinental country located mainly on the Anatolian peninsula in Western Asia, with a smaller portion on the Balkan peninsula in Southeastern Europe.",
+    "capital": "Ankara",
+    "population": "82 million"
+  },
+  {
+    "id": 27,
+    "country": "Ukraine",
+    "language": "ukranian",
+    "desc": "Ukraine is a large country in Eastern Europe known for its Orthodox churches, Black Sea coastline and forested mountains. Its capital, Kiev, features the gold-domed St. Sophia's Cathedral, with 11th-century mosaics and frescoes. Overlooking the Dnieper River is the Kiev Pechersk Lavra monastery complex, a Christian pilgrimage site housing Scythian tomb relics and catacombs containing mummified Orthodox monks.",
+    "capital": "Kyiv",
+    "population": "42 million"
+  },
+  {
+    "id": 28,
+    "country": "Uzbekistan",
+    "language": "uzbek",
+    "desc": "Uzbekistan is a Central Asian nation and former Soviet republic. It's known for its mosques, mausoleums and other sites linked to the Silk Road, the ancient trade route between China and the Mediterranean. Samarkand, a major city on the route, contains a landmark of Islamic architecture: the Registan, a plaza bordered by 3 ornate, mosaic-covered religious schools dating to the 15th and 17th centuries.",
+    "capital": "Tashkent",
+    "population": "34 million"
+  },
+  {
+    "id": 29,
+    "country": "Nigeria",
+    "language": "yoruba",
+    "desc": "Nigeria, an African country on the Gulf of Guinea, has many natural landmarks and wildlife reserves. Protected areas such as Cross River National Park and Yankari National Park have waterfalls, dense rainforest, savanna and rare primate habitats. One of the most recognizable sites is Zuma Rock, a 725m-tall monolith outside the capital of Abuja that’s pictured on the national currency.",
+    "capital": "Abuja",
+    "population": "195.9 million"
+  }
+]
