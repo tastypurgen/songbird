@@ -1,0 +1,25 @@
+.jumbotron {
+  display: flex;
+  background-color: #63636367 !important;
+  margin: 1rem 0;
+
+  .flag {
+    margin-right: 1em;
+
+    img {
+      width: 300px;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    .language {
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+// #37474f
+// #62727b
+// #102027
+
+// #7b1fa2
+// #ae52d4
+// #4a0072
+.header {
+  .container-xl {
+    .row {
+      .col {
+        text-align: center;
+        background: #7b1fa2;
+        color: white;
+      }
+
+      .active {
+        background: #ae52d4;
+      }
+    }
+  }
+}
