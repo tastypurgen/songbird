@@ -30,17 +30,16 @@ function App() {
         currentArray={shuffledData[currentStage]}
         answerIndex={answerIndex} />
       <div className="panel">
-        <Container>
+        <Container fluid="xl">
           <Row>
-            <Col>
+            <Col sm={4}>
               <Options
                 currentArray={shuffledData[currentStage]}
                 answerIndex={answerIndex} />
             </Col>
-            <Col>
-              <Description />
+            <Col sm={8}>
+              <Description currentArray={shuffledData[currentStage]} />
             </Col>
-
           </Row>
         </Container>
       </div>

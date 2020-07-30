@@ -1,0 +1,22 @@
+.description {
+  background-color: #63636367;
+  text-align: center;
+
+  .country {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  .description-flag {
+    width: 200px;
+    margin-bottom: 5px;
+  }
+
+  .capital {
+    font-size: 1.1rem;
+
+    span {
+      color: #bb87d1;
+    }
+  }
+}

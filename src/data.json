@@ -105,7 +105,7 @@
   },
   {
     "id": 13,
-    "country": "Italia",
+    "country": "Italy",
     "language": "italian",
     "desc": "Italy, a European country with a long Mediterranean coastline, has left a powerful mark on Western culture and cuisine. Its capital, Rome, is home to the Vatican as well as landmark art and ancient ruins. Other major cities include Florence, with Renaissance masterpieces such as Michelangelo’s \"David\" and Brunelleschi's Duomo; Venice, the city of canals; and Milan, Italy’s fashion capital.",
     "capital": "Rome",
@@ -178,7 +178,7 @@
   {
     "id": 22,
     "country": "Slovakia",
-    "language": "slovakian",
+    "language": "slovak",
     "desc": "Slovakia, officially the Slovak Republic, is a landlocked country in Central Europe. It is bordered by Poland to the north, Ukraine to the east, Hungary to the south, Austria to the southwest, and Czech Republic to the northwest. Slovakia's territory spans about 49,000 square kilometres and is mostly mountainous.",
     "capital": "Bratislava",
     "population": "5.5 million"
