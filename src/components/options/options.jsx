@@ -6,7 +6,7 @@ const Options = ({ options }) => {
   console.log(options)
   return (
     <div>
-      <Answer language={options[0].language} />
+      <Answer language={'english'} />
     </div>
   )
 }
