@@ -10,6 +10,8 @@ export default function player({ audio }) {
         src={audio}
         preload="auto"
         controls
+        controlsList="nodownload"
+        title=" "
       />
     </div>
   )

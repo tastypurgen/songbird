@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './app.scss';
 import Header from '../header/header';
 import Jumbotron from '../jumbotron/jumbotron';
@@ -8,18 +8,27 @@ import Footer from '../footer/footer';
 
 import data from '../../data.json'
 
-const DataContext = React.createContext(data)
+data.sort(() => Math.random() - 0.5)
+
+const shuffledData: any[] = []
+
+for (let i = 0; i < data.length; i += 5) {
+  shuffledData.push(data.slice(i, i + 5))
+}
+console.log('shuffle: ', shuffledData);
 
 function App() {
+  const [currentStage, setStage] = useState(0)
+
   return (
     <div className="songbird">
-      <DataContext.Provider value={data}>
-        <Header />
-        <Jumbotron data={data} />
-        <Options />
+      <Header />
+      <Jumbotron data={data} />
+      <div className="panel">
+        <Options options={shuffledData[currentStage]} />
         <Description />
-        <Footer />
-      </DataContext.Provider>
+      </div>
+      <Footer />
     </div>
   );
 }

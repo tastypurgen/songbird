@@ -1,8 +1,13 @@
 import React from 'react'
+import Answer from '../answer/answer'
 
-const Options = () => {
+const Options = ({ options }) => {
+
+  console.log(options)
   return (
-    <h2>Options</h2>
+    <div>
+      <Answer language={options[0].language} />
+    </div>
   )
 }
 
