@@ -5,7 +5,11 @@ import './jumbotron.scss'
 const flagsPath = process.env.PUBLIC_URL + '/assets/flags/';
 const audioPath = process.env.PUBLIC_URL + '/assets/audio/';
 
-const Jumbotron = ({ data }) => {
+const Jumbotron = ({ currentArray, answerIndex }) => {
+
+  const { language } = currentArray[answerIndex]
+  console.log('language: ', language);
+
   return (
     <div className="jumbotron">
       <div className="flag">
@@ -13,7 +17,7 @@ const Jumbotron = ({ data }) => {
       </div>
       <div className="info">
         <p className="language">Guess the language...</p>
-        <Player audio={audioPath + 'english' + '.mp3'} />
+        <Player audio={audioPath + language + '.mp3'} />
       </div>
     </div>
   )

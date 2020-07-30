@@ -2,7 +2,9 @@ import React from 'react'
 
 const Description = () => {
   return (
-    <h2>Description</h2>
+    <div>
+      <p>Choose any variant</p>
+    </div>
   )
 }
 

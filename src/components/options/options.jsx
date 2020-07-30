@@ -1,14 +1,13 @@
 import React from 'react'
 import Answer from '../answer/answer'
 
-const Options = ({ options }) => {
+export default function Options({ currentArray, answerIndex }) {
 
-  console.log(options)
   return (
     <div>
-      <Answer language={'english'} />
+      {currentArray.map(item => {
+        return <Answer key={item.id} language={item.language} />
+      })}
     </div>
   )
 }
-
-export default Options
