@@ -3,7 +3,6 @@ import React from 'react'
 const flagsPath = process.env.PUBLIC_URL + '/assets/flags/';
 
 export default function Answer({ flag, language }) {
-  console.log(flag)
   return (
     <div style={{ display: 'flex' }}>
       <div style={{

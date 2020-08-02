@@ -6,7 +6,7 @@ const flagsPath = process.env.PUBLIC_URL + '/assets/flags/';
 const audioPath = process.env.PUBLIC_URL + '/assets/audio/';
 const Description = ({ currentArray }) => {
 
-  console.log(currentArray[0])
+  // console.log(currentArray[0])
   return (
     <div className="description">
       <div className="overview">

@@ -8,7 +8,7 @@ const audioPath = process.env.PUBLIC_URL + '/assets/audio/';
 const Jumbotron = ({ currentArray, answerIndex }) => {
 
   const { language } = currentArray[answerIndex]
-  console.log('language: ', language);
+  // console.log('language: ', language);
 
   return (
     <div className="jumbotron">

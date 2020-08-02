@@ -19,9 +19,19 @@ for (let i = 0; i < data.length; i += 5) {
 }
 console.log(shuffledData);
 
+
 function App() {
   const [currentStage, setStage] = useState(0)
   const [answerIndex, setLanguage] = useState(getRandomNumber(0, 4))
+
+  const checkAnswer = (id) => {
+
+    if (id === answerIndex) {
+      console.log('right!')
+    } else {
+      console.log('wrong!')
+    }
+  }
 
   return (
     <div className="songbird">
@@ -35,7 +45,8 @@ function App() {
             <Col sm={4}>
               <Options
                 currentArray={shuffledData[currentStage]}
-                answerIndex={answerIndex} />
+                answerIndex={answerIndex}
+                checkAnswer={checkAnswer} />
             </Col>
             <Col sm={8}>
               <Description currentArray={shuffledData[currentStage]} />
