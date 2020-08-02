@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const flagsPath = process.env.PUBLIC_URL + '/assets/flags/';
+const flagsPath = `${process.env.PUBLIC_URL}/assets/flags/`;
 
 export default function Answer({ flag, language }) {
   return (
@@ -12,17 +13,28 @@ export default function Answer({ flag, language }) {
         overflow: 'hidden',
         borderRadius: '50%',
         marginRight: '10px',
-        border: '1px solid grey'
-      }}>
-        <img style={{
-          display: 'inline',
-          margin: '0 auto',
-          marginLeft: '-25%',
-          marginTop: '-2%',
-          height: '100%',
-          width: 'auto'
-        }} src={flagsPath + flag + '.svg'} alt="flag"></img>
-      </div>{language}
+        border: '1px solid grey',
+      }}
+      >
+        <img
+          style={{
+            display: 'inline',
+            margin: '0 auto',
+            marginLeft: '-25%',
+            marginTop: '-2%',
+            height: '100%',
+            width: 'auto',
+          }}
+          src={`${flagsPath + flag}.svg`}
+          alt="flag"
+        />
+      </div>
+      {language}
     </div>
-  )
+  );
 }
+
+Answer.propTypes = {
+  flag: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired,
+};

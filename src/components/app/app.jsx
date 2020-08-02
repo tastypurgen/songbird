@@ -1,44 +1,43 @@
 import React, { useState } from 'react';
-import { Container, Col, Row } from 'react-bootstrap'
+import { Container, Col, Row } from 'react-bootstrap';
 import './app.scss';
 import Header from '../header/header';
 import Jumbotron from '../jumbotron/jumbotron';
 import Options from '../options/options';
 import Description from '../description/description';
 import Footer from '../footer/footer';
-import getRandomNumber from '../../utils/getRandomNumber'
+import getRandomNumber from '../../utils/getRandomNumber';
 
-import data from '../../data.json'
+import data from '../../data.json';
 
-data.sort(() => Math.random() - 0.5)
+data.sort(() => Math.random() - 0.5);
 
-const shuffledData = []
+const shuffledData = [];
 
 for (let i = 0; i < data.length; i += 5) {
-  shuffledData.push(data.slice(i, i + 5))
+  shuffledData.push(data.slice(i, i + 5));
 }
-console.log(shuffledData);
-
+// console.log(shuffledData);
 
 function App() {
-  const [currentStage, setStage] = useState(0)
-  const [answerIndex, setLanguage] = useState(getRandomNumber(0, 4))
+  const [currentStage, setStage] = useState(0);
+  const [answerIndex, setLanguage] = useState(getRandomNumber(0, 4));
 
   const checkAnswer = (id) => {
-
     if (id === answerIndex) {
-      console.log('right!')
+      console.log('right!');
     } else {
-      console.log('wrong!')
+      console.log('wrong!');
     }
-  }
+  };
 
   return (
     <div className="songbird">
       <Header />
       <Jumbotron
         currentArray={shuffledData[currentStage]}
-        answerIndex={answerIndex} />
+        answerIndex={answerIndex}
+      />
       <div className="panel">
         <Container fluid="xl">
           <Row>
@@ -46,7 +45,8 @@ function App() {
               <Options
                 currentArray={shuffledData[currentStage]}
                 answerIndex={answerIndex}
-                checkAnswer={checkAnswer} />
+                checkAnswer={checkAnswer}
+              />
             </Col>
             <Col sm={8}>
               <Description currentArray={shuffledData[currentStage]} />
