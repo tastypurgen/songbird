@@ -11,15 +11,14 @@ export default function Options({ currentArray, answerIndex, checkAnswer }) {
       {currentArray.map((item, index) => {
         const newStr = item.language[0].toUpperCase() + item.language.slice(1);
         return (
-          <ListGroup.Item
+          <Answer
             key={item.id}
-            onClick={() => checkAnswer(index)}
-          >
-            <Answer
-              flag={item.country}
-              language={newStr}
-            />
-          </ListGroup.Item>
+            answerIndex={index}
+            checkAnswer={checkAnswer}
+            rightAnswer={index === answerIndex}
+            flag={item.country}
+            language={newStr}
+          />
         );
       })}
     </ListGroup>

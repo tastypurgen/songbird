@@ -20,14 +20,17 @@ for (let i = 0; i < data.length; i += 5) {
 // console.log(shuffledData);
 
 function App() {
+  const [isStageCompleted, setIsStageCompleted] = useState(false);
   const [currentStage, setStage] = useState(0);
+  const [currentItem, setCurrentItem] = useState(-1);
   const [answerIndex, setLanguage] = useState(getRandomNumber(0, 4));
 
   const checkAnswer = (id) => {
+    setCurrentItem(id);
     if (id === answerIndex) {
-      console.log('right!');
+      setIsStageCompleted(true);
     } else {
-      console.log('wrong!');
+      // console.log('wrong!');
     }
   };
 
@@ -35,6 +38,7 @@ function App() {
     <div className="songbird">
       <Header />
       <Jumbotron
+        isStageCompleted={isStageCompleted}
         currentArray={shuffledData[currentStage]}
         answerIndex={answerIndex}
       />
@@ -49,7 +53,10 @@ function App() {
               />
             </Col>
             <Col sm={8}>
-              <Description currentArray={shuffledData[currentStage]} />
+              <Description
+                currentItem={currentItem}
+                currentArray={shuffledData[currentStage]}
+              />
             </Col>
           </Row>
         </Container>
