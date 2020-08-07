@@ -6,7 +6,7 @@ import {
 import ProgressBar from './progressBar';
 import './header.scss';
 
-export default function Header({ shuffledData, currentStage }) {
+export default function Header({ shuffledData, currentStage, totalPoints }) {
   return (
     <header className="header">
       <Navbar bg="dark" variant="dark">
@@ -16,7 +16,7 @@ export default function Header({ shuffledData, currentStage }) {
           </Navbar.Brand>
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              Score: 0
+              Score: {totalPoints}
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>

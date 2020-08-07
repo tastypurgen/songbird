@@ -23,14 +23,17 @@ function App() {
   const [currentStage, setStage] = useState(0);
   const [currentItem, setCurrentItem] = useState(-1);
   const [answerIndex, setAnswerIndex] = useState(getRandomNumber(0, 4));
+  const [totalPoints, setTotalPoints] = useState(0);
+  const [answerPoints, setAnswerPoints] = useState(5);
 
   const checkAnswer = (id) => {
     setCurrentItem(id);
+    console.log('answerPoints: ', answerPoints);
     if (id === answerIndex) {
       setIsStageCompleted(true);
-    } else {
-      // console.log('wrong!');
-    }
+      setTotalPoints((prev) => prev + answerPoints);
+      setAnswerPoints(5);
+    } else if (answerPoints !== 0) setAnswerPoints((prev) => prev - 1);
   };
 
   const startNextStage = () => {
@@ -45,15 +48,19 @@ function App() {
 
   if (currentStage === 6) {
     return (
-      <div>
+      <Container fluid="xl">
         <Header
           shuffledData={shuffledData}
           currentStage={currentStage - 1}
+          totalPoints={totalPoints}
         />
-        <div>
-          The End
+        <div className="game-over">
+          <h2>Game Over!</h2>
+          <h3>Your score:</h3>
+          <h3>{totalPoints} of 30</h3>
+          <button className="btn secondary" type="button">Play Again</button>
         </div>
-      </div>
+      </Container>
     );
   }
 
@@ -63,27 +70,30 @@ function App() {
         <Header
           shuffledData={shuffledData}
           currentStage={currentStage}
+          totalPoints={totalPoints}
         />
-        <Jumbotron
-          isStageCompleted={isStageCompleted}
-          currentArray={shuffledData[currentStage]}
-          answerIndex={answerIndex}
-        />
-        <Row>
-          <Col sm={4}>
-            <Options
-              currentArray={shuffledData[currentStage]}
-              answerIndex={answerIndex}
-              checkAnswer={checkAnswer}
-            />
-          </Col>
-          <Col sm={8} style={{ backgroundColor: '#63636367' }}>
-            <Description
-              currentItem={currentItem}
-              currentArray={shuffledData[currentStage]}
-            />
-          </Col>
-        </Row>
+        <div className="content">
+          <Jumbotron
+            isStageCompleted={isStageCompleted}
+            currentArray={shuffledData[currentStage]}
+            answerIndex={answerIndex}
+          />
+          <Row>
+            <Col sm={4}>
+              <Options
+                currentArray={shuffledData[currentStage]}
+                answerIndex={answerIndex}
+                checkAnswer={checkAnswer}
+              />
+            </Col>
+            <Col sm={8} style={{ backgroundColor: '#63636367' }}>
+              <Description
+                currentItem={currentItem}
+                currentArray={shuffledData[currentStage]}
+              />
+            </Col>
+          </Row>
+        </div>
         <Footer
           startNextStage={startNextStage}
           isStageCompleted={isStageCompleted}
