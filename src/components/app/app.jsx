@@ -35,34 +35,34 @@ function App() {
   };
 
   return (
-    <div className="songbird">
-      <Header />
-      <Jumbotron
-        isStageCompleted={isStageCompleted}
-        currentArray={shuffledData[currentStage]}
-        answerIndex={answerIndex}
-      />
-      <div className="panel">
-        <Container fluid="xl">
-          <Row>
-            <Col sm={4}>
-              <Options
-                currentArray={shuffledData[currentStage]}
-                answerIndex={answerIndex}
-                checkAnswer={checkAnswer}
-              />
-            </Col>
-            <Col sm={8}>
-              <Description
-                currentItem={currentItem}
-                currentArray={shuffledData[currentStage]}
-              />
-            </Col>
-          </Row>
-        </Container>
+    <Container fluid="xl">
+      <div className="songbird">
+        <Header />
+        <Jumbotron
+          isStageCompleted={isStageCompleted}
+          currentArray={shuffledData[currentStage]}
+          answerIndex={answerIndex}
+        />
+        <Row>
+          <Col sm={4}>
+            <Options
+              currentArray={shuffledData[currentStage]}
+              answerIndex={answerIndex}
+              checkAnswer={checkAnswer}
+            />
+          </Col>
+          <Col sm={8}>
+            <Description
+              currentItem={currentItem}
+              currentArray={shuffledData[currentStage]}
+            />
+          </Col>
+        </Row>
+        <Footer
+          isStageCompleted={isStageCompleted}
+        />
       </div>
-      <Footer />
-    </div>
+    </Container>
   );
 }
 

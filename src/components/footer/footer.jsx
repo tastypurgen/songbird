@@ -1,7 +1,11 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
+import './footer.scss';
 
-const Footer = () => (
-  <h2>Footer</h2>
-);
-
-export default Footer;
+export default function Footer({ isStageCompleted }) {
+  // if (!isStageCompleted) {
+  return (
+    <Button variant="secondary">Next Level</Button>
+  );
+  // }
+}
