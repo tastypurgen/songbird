@@ -1,10 +1,12 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import {
-  Container, Navbar, Row, Col,
+  Container, Navbar, Row,
 } from 'react-bootstrap';
+import ProgressBar from './progressBar';
 import './header.scss';
 
-const Header = () => (
+const Header = ({ shuffledData, currentStage }) => (
   <header className="header">
     <Navbar bg="dark" variant="dark">
       <Container fluid="sm">
@@ -20,12 +22,13 @@ const Header = () => (
     </Navbar>
     <Container fluid="xl">
       <Row>
-        <Col className="active">Warm-Up</Col>
-        <Col>Stage 1</Col>
-        <Col>Stage 2</Col>
-        <Col>Stage 3</Col>
-        <Col>Stage 4</Col>
-        <Col>Stage 5</Col>
+        {shuffledData.map((item, i) => (
+          <ProgressBar
+            key={i}
+            index={i}
+            currentStage={currentStage}
+          />
+        ))}
       </Row>
     </Container>
   </header>

@@ -12,21 +12,24 @@ export default function Description({ currentArray, currentItem }) {
       <div className="description">
         <div className="overview">
           <img className="description-flag" src={`${flagsPath + currentArray[currentItem].country}.svg`} alt="flag" />
-          <p className="country">{currentArray[currentItem].country}</p>
-          <Player audio={`${audioPath + currentArray[currentItem].language}.mp3`} />
-          <p className="capital">
-            capital:
-            <span>
+          <div style={{ width: '100%' }}>
+            <p className="country">{currentArray[currentItem].country}</p>
+            <Player audio={`${audioPath + currentArray[currentItem].language}.mp3`} />
+            <p className="capital">
+              capital:
+              <span>
+                {' '}
+                {currentArray[currentItem].capital}
+              </span>
               {' '}
-              {currentArray[currentItem].capital}
-            </span>
-            {' '}
-            population:
-            <span>
-              {' '}
-              {currentArray[currentItem].population}
-            </span>
-          </p>
+              <br />
+              population:
+              <span>
+                {' '}
+                {currentArray[currentItem].population}
+              </span>
+            </p>
+          </div>
         </div>
         <p className="desc">{currentArray[currentItem].desc}</p>
       </div>

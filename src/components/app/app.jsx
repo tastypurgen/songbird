@@ -17,13 +17,12 @@ const shuffledData = [];
 for (let i = 0; i < data.length; i += 5) {
   shuffledData.push(data.slice(i, i + 5));
 }
-// console.log(shuffledData);
 
 function App() {
   const [isStageCompleted, setIsStageCompleted] = useState(false);
   const [currentStage, setStage] = useState(0);
   const [currentItem, setCurrentItem] = useState(-1);
-  const [answerIndex, setLanguage] = useState(getRandomNumber(0, 4));
+  const [answerIndex, setAnswerIndex] = useState(getRandomNumber(0, 4));
 
   const checkAnswer = (id) => {
     setCurrentItem(id);
@@ -34,10 +33,19 @@ function App() {
     }
   };
 
+  const startNextStage = () => {
+    setIsStageCompleted(false);
+    setStage((prev) => prev + 1);
+    setAnswerIndex(getRandomNumber(0, 4));
+  };
+
   return (
     <Container fluid="xl">
       <div className="songbird">
-        <Header />
+        <Header
+          shuffledData={shuffledData}
+          currentStage={currentStage}
+        />
         <Jumbotron
           isStageCompleted={isStageCompleted}
           currentArray={shuffledData[currentStage]}
@@ -51,7 +59,7 @@ function App() {
               checkAnswer={checkAnswer}
             />
           </Col>
-          <Col sm={8}>
+          <Col sm={8} style={{ backgroundColor: '#63636367' }}>
             <Description
               currentItem={currentItem}
               currentArray={shuffledData[currentStage]}
@@ -59,6 +67,7 @@ function App() {
           </Col>
         </Row>
         <Footer
+          startNextStage={startNextStage}
           isStageCompleted={isStageCompleted}
         />
       </div>

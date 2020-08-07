@@ -1,6 +1,18 @@
 .description {
-  background-color: #63636367;
+  // background-color: #63636367;
   text-align: center;
+  max-height: 290px;
+  overflow-y: scroll;
+
+  .overview {
+    display: flex;
+    // flex-direction: row;
+    img {
+      width: 30%;
+      height: auto;
+      margin: 0.5rem;
+    }
+  }
 
   .country {
     font-weight: 500;
@@ -16,7 +28,17 @@
     font-size: 1.1rem;
 
     span {
-      color: #bb87d1;
+      color: #7b1fa2;
+      text-shadow: 0.5px 0 0 #000, 0 0 3px rgba(109, 109, 109, 0.39), 0 0 10px #fff, 0 0 10px #fff;
+      font-weight: 500;
     }
   }
+
+  .desc {
+    font-size: 0.8rem;
+  }
+}
+.description::-webkit-scrollbar {
+  display: none;
+  // scrollbar-width: none;
 }
