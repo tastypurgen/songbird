@@ -34,10 +34,28 @@ function App() {
   };
 
   const startNextStage = () => {
-    setIsStageCompleted(false);
-    setStage((prev) => prev + 1);
-    setAnswerIndex(getRandomNumber(0, 4));
+    if (currentStage === 5) {
+      setStage((prev) => prev + 1);
+    } else {
+      setIsStageCompleted(false);
+      setStage((prev) => prev + 1);
+      setAnswerIndex(getRandomNumber(0, 4));
+    }
   };
+
+  if (currentStage === 6) {
+    return (
+      <div>
+        <Header
+          shuffledData={shuffledData}
+          currentStage={currentStage - 1}
+        />
+        <div>
+          The End
+        </div>
+      </div>
+    );
+  }
 
   return (
     <Container fluid="xl">
@@ -69,6 +87,7 @@ function App() {
         <Footer
           startNextStage={startNextStage}
           isStageCompleted={isStageCompleted}
+          currentStage={currentStage}
         />
       </div>
     </Container>

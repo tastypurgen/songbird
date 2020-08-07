@@ -1,12 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Player from '../player/player';
 import './jumbotron.scss';
 
 const flagsPath = `${process.env.PUBLIC_URL}/assets/flags/`;
 const audioPath = `${process.env.PUBLIC_URL}/assets/audio/`;
 
-const Jumbotron = ({ currentArray, answerIndex, isStageCompleted }) => {
+export default function Jumbotron({ currentArray, answerIndex, isStageCompleted }) {
+  console.log('isStageCompleted: ', isStageCompleted);
+  console.log('answerIndex: ', answerIndex);
+  console.log('currentArray: ', currentArray);
+
+  console.log('jumbo rendered');
   const { language } = currentArray[answerIndex];
   let flag;
   const newStr = currentArray[answerIndex].language[0].toUpperCase()
@@ -26,13 +30,4 @@ const Jumbotron = ({ currentArray, answerIndex, isStageCompleted }) => {
       </div>
     </div>
   );
-};
-
-export default Jumbotron;
-
-Jumbotron.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  currentArray: PropTypes.array.isRequired,
-  answerIndex: PropTypes.number.isRequired,
-  isStageCompleted: PropTypes.bool.isRequired,
-};
+}
