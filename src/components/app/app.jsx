@@ -12,11 +12,16 @@ import data from '../../data.json';
 
 data.sort(() => Math.random() - 0.5);
 
-const shuffledData = [];
+let shuffledData = [];
 
-for (let i = 0; i < data.length; i += 5) {
-  shuffledData.push(data.slice(i, i + 5));
-}
+const shuffleData = () => {
+  shuffledData = [];
+  for (let i = 0; i < data.length; i += 5) {
+    shuffledData.push(data.slice(i, i + 5));
+  }
+};
+
+shuffleData();
 
 function App() {
   const [isStageCompleted, setIsStageCompleted] = useState(false);
@@ -46,6 +51,15 @@ function App() {
     }
   };
 
+  const restartGame = () => {
+    shuffleData();
+
+    setStage(0);
+    setIsStageCompleted(false);
+    setTotalPoints(0);
+    setAnswerPoints(5);
+  };
+
   if (currentStage === 6) {
     return (
       <Container fluid="xl">
@@ -58,7 +72,7 @@ function App() {
           <h2>Game Over!</h2>
           <h3>Your score:</h3>
           <h3>{totalPoints} of 30</h3>
-          <button className="btn secondary" type="button">Play Again</button>
+          <button className="btn secondary" onClick={restartGame} type="button">Play Again</button>
         </div>
       </Container>
     );
