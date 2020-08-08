@@ -1,0 +1,25 @@
+.jumbo {
+  // display: flex;
+  background-color: #63636367;
+  margin: 1rem 0 !important;
+  padding: 1rem 1rem;
+  text-align: center;
+
+  .flag {
+    img {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    .language {
+      font-size: 1.8rem;
+    }
+  }
+}
