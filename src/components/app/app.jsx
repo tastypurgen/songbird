@@ -42,13 +42,12 @@ function App() {
   };
 
   const startNextStage = () => {
-    if (currentStage === 5) {
-      setStage((prev) => prev + 1);
-    } else {
+    if (currentStage !== 5) {
       setIsStageCompleted(false);
-      setStage((prev) => prev + 1);
       setAnswerIndex(getRandomNumber(0, 4));
     }
+    setStage((prev) => prev + 1);
+    setCurrentItem(-1);
   };
 
   const restartGame = () => {
