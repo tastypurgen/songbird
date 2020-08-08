@@ -27,8 +27,6 @@ export default class Jumbotron extends PureComponent {
           <Player audio={`${audioPath + language}.mp3`} />
         </Col>
       </Row>
-      // <div className="jumbotron">
-      // </div>
     );
   }
 }

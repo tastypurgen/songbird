@@ -13,6 +13,7 @@ import data from '../../data.json';
 data.sort(() => Math.random() - 0.5);
 
 let shuffledData = [];
+const soundPath = `${process.env.PUBLIC_URL}/assets/`;
 
 const shuffleData = () => {
   shuffledData = [];
@@ -31,14 +32,21 @@ function App() {
   const [totalPoints, setTotalPoints] = useState(0);
   const [answerPoints, setAnswerPoints] = useState(5);
 
+  const rightSound = new Audio(`${soundPath}/right.mp3`);
+  const wrongSound = new Audio(`${soundPath}/wrong.mp3`);
+  const winSound = new Audio(`${soundPath}/win.mp3`);
+
   const checkAnswer = (id) => {
     setCurrentItem(id);
-    console.log('answerPoints: ', answerPoints);
     if (id === answerIndex) {
       setIsStageCompleted(true);
       setTotalPoints((prev) => prev + answerPoints);
       setAnswerPoints(5);
-    } else if (answerPoints !== 0) setAnswerPoints((prev) => prev - 1);
+      if (!isStageCompleted) rightSound.play();
+    } else if (answerPoints !== 0) {
+      if (!isStageCompleted) wrongSound.play();
+      setAnswerPoints((prev) => prev - 1);
+    }
   };
 
   const startNextStage = () => {
@@ -60,6 +68,7 @@ function App() {
   };
 
   if (currentStage === 6) {
+    if (totalPoints === 30) winSound.play();
     return (
       <Container fluid="xl">
         <Header
