@@ -1,11 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { ListGroup } from 'react-bootstrap';
 import Answer from '../answer/answer';
 
 import './options.scss';
 
-export default function Options({ currentArray, answerIndex, checkAnswer }) {
+export default function Options({
+  currentArray, answerIndex, checkAnswer, isStageCompleted,
+}) {
   return (
     <ListGroup>
       {currentArray.map((item, index) => {
@@ -18,16 +19,10 @@ export default function Options({ currentArray, answerIndex, checkAnswer }) {
             rightAnswer={index === answerIndex}
             flag={item.country}
             language={newStr}
+            isStageCompleted={isStageCompleted}
           />
         );
       })}
     </ListGroup>
   );
 }
-
-Options.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  currentArray: PropTypes.array.isRequired,
-  answerIndex: PropTypes.number.isRequired,
-  checkAnswer: PropTypes.func.isRequired,
-};

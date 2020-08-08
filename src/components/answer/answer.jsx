@@ -6,7 +6,7 @@ import './answer.scss';
 const flagsPath = `${process.env.PUBLIC_URL}/assets/flags/`;
 
 export default function Answer({
-  flag, language, checkAnswer, rightAnswer, answerIndex,
+  flag, language, checkAnswer, rightAnswer, answerIndex, isStageCompleted,
 }) {
   const [isClicked, setIsClicked] = useState(false);
 
@@ -15,7 +15,9 @@ export default function Answer({
   else borders = [{ border: '2px solid #63636367' }, { border: '2px solid green' }];
 
   const handleClick = () => {
-    setIsClicked(true);
+    if (!isStageCompleted) {
+      setIsClicked(true);
+    }
     checkAnswer(answerIndex);
   };
 

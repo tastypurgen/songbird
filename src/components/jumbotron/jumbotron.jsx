@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Row, Col } from 'react-bootstrap';
 import Player from '../player/player';
 import './jumbotron.scss';
 
@@ -17,15 +18,17 @@ export default class Jumbotron extends PureComponent {
     else flag = 'Unknown';
     const { language } = currentArray[answerIndex];
     return (
-      <div className="jumbotron">
-        <div className="flag">
+      <Row className="jumbo">
+        <Col sm={4} className="flag">
           <img src={`${flagsPath}${flag}.svg`} alt="flag" />
-        </div>
-        <div className="info">
-          <p className="language">{isStageCompleted ? newStr : 'Guess the language...'}</p>
+        </Col>
+        <Col sm={8} className="info">
+          <p className="language">{isStageCompleted ? newStr : '*****'}</p>
           <Player audio={`${audioPath + language}.mp3`} />
-        </div>
-      </div>
+        </Col>
+      </Row>
+      // <div className="jumbotron">
+      // </div>
     );
   }
 }

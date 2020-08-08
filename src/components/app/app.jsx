@@ -98,9 +98,10 @@ function App() {
                 currentArray={shuffledData[currentStage]}
                 answerIndex={answerIndex}
                 checkAnswer={checkAnswer}
+                isStageCompleted={isStageCompleted}
               />
             </Col>
-            <Col sm={8} style={{ backgroundColor: '#63636367' }}>
+            <Col sm={8}>
               <Description
                 currentItem={currentItem}
                 currentArray={shuffledData[currentStage]}

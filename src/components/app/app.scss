@@ -25,6 +25,7 @@ body {
   margin: 0 auto;
   width: 95%;
   .content {
+    min-height: -webkit-fill-available;
     min-height: calc(100vh - 150px - 2rem);
   }
 }
