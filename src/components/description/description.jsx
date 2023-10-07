@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './description.scss';
 import Player from '../player/player';
 
@@ -40,3 +41,9 @@ export default function Description({ currentArray, currentItem }) {
     </div>
   );
 }
+
+Description.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  currentArray: PropTypes.array.isRequired,
+  currentItem: PropTypes.number.isRequired,
+};

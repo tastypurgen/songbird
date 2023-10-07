@@ -13,7 +13,6 @@ import data from '../../data.json';
 data.sort(() => Math.random() - 0.5);
 
 let shuffledData = [];
-const soundPath = `${process.env.PUBLIC_URL}/assets/`;
 
 const shuffleData = () => {
   shuffledData = [];
@@ -31,31 +30,26 @@ function App() {
   const [answerIndex, setAnswerIndex] = useState(getRandomNumber(0, 4));
   const [totalPoints, setTotalPoints] = useState(0);
   const [answerPoints, setAnswerPoints] = useState(5);
-
-  const rightSound = new Audio(`${soundPath}/right.mp3`);
-  const wrongSound = new Audio(`${soundPath}/wrong.mp3`);
-  const winSound = new Audio(`${soundPath}/win.mp3`);
-
+  console.log(1, currentItem);
   const checkAnswer = (id) => {
     setCurrentItem(id);
+
     if (id === answerIndex) {
       setIsStageCompleted(true);
       setTotalPoints((prev) => prev + answerPoints);
       setAnswerPoints(5);
-      if (!isStageCompleted) rightSound.play();
-    } else if (answerPoints !== 0) {
-      if (!isStageCompleted) wrongSound.play();
-      setAnswerPoints((prev) => prev - 1);
-    }
+    } else if (answerPoints !== 0) setAnswerPoints((prev) => prev - 1);
   };
 
   const startNextStage = () => {
-    if (currentStage !== 5) {
+    if (currentStage === 5) {
+      setStage((prev) => prev + 1);
+    } else {
       setIsStageCompleted(false);
+      setStage((prev) => prev + 1);
       setAnswerIndex(getRandomNumber(0, 4));
+      setCurrentItem(-1);
     }
-    setStage((prev) => prev + 1);
-    setCurrentItem(-1);
   };
 
   const restartGame = () => {
@@ -68,7 +62,6 @@ function App() {
   };
 
   if (currentStage === 6) {
-    if (totalPoints === 30) winSound.play();
     return (
       <Container fluid="xl">
         <Header

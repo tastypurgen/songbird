@@ -1,4 +1,5 @@
 .jumbo {
+  // display: flex;
   background-color: #63636367;
   margin: 1rem 0 !important;
   padding: 1rem 1rem;
@@ -7,7 +8,6 @@
   .flag {
     img {
       width: 100%;
-      height: 155px;
       max-width: 300px;
     }
   }
