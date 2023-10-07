@@ -30,7 +30,7 @@ function App() {
   const [answerIndex, setAnswerIndex] = useState(getRandomNumber(0, 4));
   const [totalPoints, setTotalPoints] = useState(0);
   const [answerPoints, setAnswerPoints] = useState(5);
-  console.log(1, currentItem);
+
   const checkAnswer = (id) => {
     setCurrentItem(id);
 
